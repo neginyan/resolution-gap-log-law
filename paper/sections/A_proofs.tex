@@ -1,0 +1,53 @@
+\section{Proof of Theorem~\ref{thm:direct} and the remainder}
+\label{app:direct}
+
+\paragraph*{Identity~\eqref{eq:identity}.}
+Write $h(z) = z - \sin z$. In Eq.~\eqref{eq:Ncov}, expand $h(X_z)$ around the posterior mean $m_z$: the first-order term gives $\Cov(X_p, X_z\mid y)\,h'(m_z) = -\sigma^4 H_{pz}\,\phi$ by Tweedie's formula, so that
+\begin{equation}
+N = \sigma^2\E[H_{pz}\phi] + R_3,
+\end{equation}
+which defines $R_3$. With $p = (v-w)/\sqrt2$ and $z = (v+w)/\sqrt2$ one has $H_{pz} = \frac12(H_{vv} - H_{ww})$, and one integration by parts gives $\E[H_{vv}\phi] = \E[s_v^2\phi] + \E[s_v\partial_v\phi]$, and the same for $w$. Hence
+\begin{equation}
+\sigma^2\E[H_{pz}\phi] = \tfrac12\sigma^2\E[s_v^2\phi] - \tfrac12\sigma^2\E[s_w^2\phi] + B,
+\end{equation}
+with $B$ as in Theorem~\ref{thm:direct}. Adding $2\sigma^2 J_{ww}$ and combining the two terms in $s_w^2$ gives Eq.~\eqref{eq:identity}. The term $-\frac12\sigma^2\E[s_w^2\phi]$, which could be negative, is absorbed exactly, because $1 - \phi/4 \geq 1/2$.
+
+\paragraph*{The inequality.}
+With $X = 2\sigma^2\E[s_w^2(1-\phi/4)]$ and $Y = \frac12\sigma^2\E[s_v^2\phi]$, $X + Y \geq 2\sqrt{XY} = \sigma a\sqrt{P_w}$. Dividing Eq.~\eqref{eq:identity} by $\sigma d$ and using Eq.~\eqref{eq:formula} gives Eq.~\eqref{eq:direct}.
+
+\paragraph*{Bound on $R_3$.}
+Write $X_z = m_z + \zeta$. Taylor's theorem to third order with the Lagrange remainder, $|h'''| \leq 1$, gives $h(m_z + \zeta) = h(m_z) + h'(m_z)\zeta + \frac12 h''(m_z)\zeta^2 + \zeta^3\Psi$ with $|\Psi| \leq 1/6$. The second-order term contributes the posterior cumulant $\Cov(X_p, \zeta^2 \mid y) = -\sigma^6\partial_p H_{zz}$ (Tweedie's formula for cumulants), and the Cauchy--Schwarz inequality bounds the third. The result is
+\begin{equation}
+|R_3| \leq \frac{\sigma^4}{2}\E\big[|\sin m_z|\,|\partial_p H_{zz}|\big] + \frac{\sigma^2}{6}\E\big[\hat s_p \hat M_6\big],
+\end{equation}
+with $\hat s_p$ the posterior standard deviation of $X_p$ and $\hat M_6$ the square root of the posterior sixth moment of $\zeta$, in units of $\sigma$ and $\sigma^3$. For a Gaussian posterior of variance $\sigma^2$, $\hat s_p = 1$ and $\hat M_6 = \sqrt{15}$. On 13 mixture and two-cluster states the actual $|R_3|$ was at most $51\%$ of this bound.
+
+\section{Proof of Lemma~\ref{lem:split}}
+\label{app:split}
+
+Write $\varrho = \varrho_1 * N(0, t\sigma^2)$ with $\varrho_1 = \rho * N(0, (1-t)\sigma^2)$, so that $|\hat\varrho|^2 = |\hat\varrho_1|^2 e^{-t\sigma^2|\xi|^2}$.
+
+\paragraph*{(i) Jensen.} Under the probability measure $\mu \propto e^{-t\sigma^2|\xi|^2}\xi_w^2|\hat\varrho_1|^2$, the mean of $\sigma^2\xi_v^2$ is $\xb(\varrho)$, so Jensen's inequality gives $\E_\mu[e^{t\sigma^2\xi_v^2}] \geq e^{t\xb(\varrho)}$. Since $\E_\mu[e^{t\sigma^2\xi_v^2}] = \nu_t/\|\partial_w\varrho\|^2$ with $\nu_t = \int \xi_w^2 e^{-t\sigma^2\xi_w^2}|\hat\varrho_1|^2\,d\xi$ (up to the common factor of Parseval's theorem), $\|\partial_w\varrho\|^2 e^{t\xb(\varrho)} \leq \nu_t$.
+
+\paragraph*{(ii) Kernel ratio.} $\xi^2 e^{-t\sigma^2\xi^2} \leq 1/(e\,t\sigma^2)$, so $\nu_t \leq \|\varrho_1\|^2/(e\,t\sigma^2)$. With $s_1^2 = (1-t)\sigma^2$, $\|\varrho_1\|^2 = \iint\rho(x)\rho(x')N(x - x'; 0, 2s_1^2 I)$, and since $\rho \geq 0$ and $N(d; 0, 2s_1^2I)/N(d; 0, 2\sigma^2 I) \leq \sigma^2/s_1^2$, $\|\varrho_1\|^2 \leq \|\varrho\|^2/(1-t)$.
+
+\paragraph*{(iii) Slice-wise Heisenberg in $L^2$.} On each line $v = \text{const}$, the Heisenberg inequality in $w$ with centre $w = -v$, where $(w+v)^2 = 2y_z^2$, gives $\int (w+v)^2\varrho^2\,dw\int(\partial_w\varrho)^2\,dw \geq \frac14\big(\int\varrho^2\,dw\big)^2$. Summing over $v$ with the Cauchy--Schwarz inequality, $\|\partial_w\varrho\|^2 \geq \|\varrho\|^2/(8\E_Q[y_z^2])$.
+
+\paragraph*{(iv) Midpoints.} $N(y; x, \sigma^2 I)N(y; x', \sigma^2 I) = N(x - x'; 0, 2\sigma^2 I)\,N\big(y; (x+x')/2, \sigma^2 I/2\big)$. Hence $Q = \varrho^2/\|\varrho\|^2$ is a mixture, with nonnegative weights, of Gaussians of variance $\sigma^2/2$ centred at midpoints of pairs of points of the state, and $\E_Q[y_z^2]$ is a weighted mean of $((x_z + x'_z)/2)^2$ plus $\sigma^2/2$. If $\rho = 0$ outside $|z| \leq \pi$, the midpoints satisfy the same bound, which gives (H1).
+
+Combining (i)--(iii), $t\,\xb(\varrho) \leq \ln\big(8\E_Q[y_z^2]/(e\,t(1-t)\sigma^2)\big)$, and (H1) gives Eq.~\eqref{eq:split}.
+
+\section{Proof of Lemma~\ref{lem:fisher}}
+\label{app:fisher}
+
+\paragraph*{(a)} Integration by parts, $\E[s_v g] = -\E[\partial_v g]$, gives $\E[s_v^2s_w^2] = \E[H_{vv}s_w^2] + 2\E[s_vs_wH_{vw}]$ and hence, with $q = s_vs_w - 2H_{vw}$,
+\begin{equation}
+\E[q^2] = \E[H_{vv}s_w^2] - 2\E[s_vs_wH_{vw}] + 4\E[H_{vw}^2].
+\end{equation}
+Tweedie's formula $\Cov(X\mid y) = tI - t^2H$ gives $H_{vv} \leq 1/t$. Write $X = (\E[s_v^2s_w^2])^{1/2}$ and $h = (\E[H_{vw}^2])^{1/2}$. The first identity and the Cauchy--Schwarz inequality give $X^2 \leq J_{ww}/t + 2hX$, so $X \leq h + \sqrt{h^2 + J_{ww}/t}$, and then $\E[q^2] \leq J_{ww}/t + 2hX + 4h^2 \leq 8h^2 + 2J_{ww}/t$, using $2h\sqrt{h^2 + u} \leq 2h^2 + u$. With $\Lambda = t\,\E[q^2]/J_{ww}$ this is (a).
+
+\paragraph*{(b)} Let $f = \ln\varrho$. Along $\partial_t\varrho = \frac12\Delta\varrho$, $\partial_t f = \frac12(\Delta f + |\nabla f|^2)$, and $u = \partial_w f$ satisfies $\partial_t u = \frac12\Delta u + s\cdot\nabla u$. Then $\frac{d}{dt}\int\varrho u^2 = \int\frac12\Delta\varrho\,u^2 + 2\int\varrho\,u\,\partial_t u$, and integrating by parts with $\int\varrho\,s\cdot\nabla g = -\int\varrho\,\Delta g$ leaves $-\int\varrho|\nabla u|^2$. Since $\nabla u = -He_w$, $|\nabla u|^2 = (H^2)_{ww} = H_{vw}^2 + H_{ww}^2$.
+
+\paragraph*{(c)} The same computation applied to $g = |\nabla u|^2$ gives $\frac{d}{dt}\E|\nabla u|^2 = -\E\|\nabla^2u\|^2 - 2\E[(H^3)_{ww}]$, so that $J_{ww}'' = \E\|\nabla^2u\|^2 + 2\E[(H^3)_{ww}]$. The Bochner identity for the operator $L = \Delta + s\cdot\nabla$, which is symmetric in $L^2(\varrho)$ with $\E[gLu] = -\E[\nabla g\cdot\nabla u]$, reads $\E[(Lu)^2] = \E\|\nabla^2u\|^2 + \E[\nabla u^\top H\nabla u] = \E\|\nabla^2 u\|^2 + \E[(H^3)_{ww}]$~\cite{bakry2014}. With $R' = -J_{ww}''/J_{ww} + R^2$ and $\E[uLu] = -\E|\nabla u|^2 = -RJ_{ww}$, one has $J_{ww}\E[(Lu)^2] - (\E[uLu])^2 = J_{ww}\E[(Lu + Ru)^2]$, and Eq.~\eqref{eq:gamma2} follows. Identities (b) and (c) were also checked by finite differences in $t$ on three lattices at three blurs (relative differences below $1.3\times 10^{-3}$).
+
+\paragraph*{The constant of Theorem~\ref{thm:valley}.} The range $c \geq 1 + \eta$ is split into bands $[c_k, c_{k+1})$, each with its own half-width $u_k$. For a valley point $y_0$ in band $k$, the two-sided bound of Sec.~\ref{sec:removing} gives $(c - 1)^3\varrho(y_0) \leq Q_k\int_{|y - y_0| \leq u_k}\varrho\,s^2$, with $Q_k = u_k\sup_{\text{band}}(c-1)^3/\big(8(e^{D(u_k,c)/4} - 1)^2\big)$. Integrating over $y_0$ and exchanging the integrals, the set of $y_0$ in band $k$ within $u_k$ of a given $y$ has length at most $2u_k$, so $\kappa_\eta = \sum_k 2u_kQ_k$. The sum converges because $D$ grows like $u\sqrt{2c}$; the bands and the $u_k$ were chosen by dynamic programming, giving $\kappa_{0.1} = 267$.

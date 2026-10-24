@@ -1,0 +1,81 @@
+\section{A direct lower bound on the gap}
+\label{sec:direct}
+
+\subsection{The gap as a tug of war}
+
+Let $\phi = 1 - \cos m_z$, a nonnegative weight that vanishes on the line $m_z = 0$ through the top and grows like $m_z^2/2$ near it. Define the \emph{weighted spread}
+\begin{equation}
+P_w = \frac{4\sigma^2\,\E[s_w^2(1 - \phi/4)]\;\E[s_v^2\phi]}{a^2}.
+\label{eq:Pw}
+\end{equation}
+The second factor measures how far from the top the state is sharp: $s_v^2$ is large where the state is sharp along the unstable direction, and $\phi$ is large where the conditional position is far from the top.
+
+\begin{theorem}[Direct bound]
+\label{thm:direct}
+For every state,
+\begin{equation}
+g \geq \frac{a}{d}\,\sqrt{P_w}\,(1 - \varepsilon),\qquad \varepsilon = -\frac{B + R_3}{\sigma a \sqrt{P_w}},
+\label{eq:direct}
+\end{equation}
+where $B = \tfrac12\sigma^2\E[s_v\partial_v\phi - s_w\partial_w\phi]$ and $R_3 = N - \sigma^2\E[H_{pz}\phi]$ is the contribution of the posterior cumulants of order three and higher. Equality in the first step requires $2\E[s_w^2(1-\phi/4)] = \tfrac12\E[s_v^2\phi]$.
+\end{theorem}
+
+The proof (Appendix~\ref{app:direct}) is an exact identity followed by the inequality of arithmetic and geometric means. Integrations by parts give
+\begin{equation}
+2\sigma^2 J_{ww} + N = 2\sigma^2\E[s_w^2(1 - \tfrac{\phi}{4})] + \tfrac12\sigma^2\E[s_v^2\phi] + B + R_3,
+\label{eq:identity}
+\end{equation}
+and the first two terms are at least $2\sqrt{\cdot\,\cdot} = \sigma a\sqrt{P_w}$. In words, the gap is the sum of two costs: the information carried along the stable direction, and the nonlinearity felt where the state is sharp. A state can make one of them small only by making the other large, and the gap is at least their geometric mean. This tug of war is the mechanism behind all results below.
+
+The remainder $\varepsilon$ is an explicit state quantity. Further integrations by parts give $B = -\sigma^4\E[s_z H_{pz}\sin m_z]$, hence $|B| \leq \sigma^4\E|s_z H_{pz}\sin m_z|$, and $R_3$ is bounded by posterior moments (Appendix~\ref{app:direct}). For nearly Gaussian posteriors $R_3 \approx B/2$ (we observed $R_3/B = 0.46$--$0.51$ on mixtures), and in this approximation $B + R_3 > 0$ near the top, so that the remainder raises the bound. On 35 states (Gaussian mixtures, localised ripples, two clusters and strips) we found $|\varepsilon| \leq 0.0042$, and the bound~\eqref{eq:direct} was below the gap on every state. A state-independent bound on $\varepsilon$ is not known.
+
+\subsection{From the weighted spread to the sharpness profile}
+
+For every real $m$, $1 - \cos m \geq (2m^2/\pi^2)\,\mathbf{1}\{|m| \leq \pi\}$; together with $1 - \phi/4 \geq 1/2$ this gives, for every state,
+\begin{gather}
+P_w \geq \frac{2}{\pi^2}\,P\,(1 - \varepsilon_\pi^2), \qquad P = \frac{2\sigma^2 J_{ww}\,\E[s_v^2 m_z^2]}{a^2}, \label{eq:PwP}\\
+\varepsilon_\pi^2 = \frac{\E[s_v^2 m_z^2\,\mathbf{1}\{|m_z| > \pi\}]}{\E[s_v^2 m_z^2]}. \nonumber
+\end{gather}
+The tail correction $\varepsilon_\pi$ vanishes when $\rho = 0$ outside $|z| \leq \pi$. On the strips of Sec.~\ref{sec:strips} it is below $10^{-3.6}$ at $\sigma = 10^{-2}$ and below $10^{-47}$ at $\sigma = 10^{-4}$ (a rigorous Gaussian tail bound); on Gaussian mixtures it is nonzero only on wide states, at most $0.27$.
+Replacing the conditional position $m_z$ by the observed position $y_z$ costs a factor $1 - \varepsilon_m$ (Minkowski's inequality in $L^2(s_v^2\varrho)$, with $m = y + \sigma^2 s$):
+\begin{gather}
+\sqrt{P} \geq (1 - \varepsilon_m)\sqrt{P_y}, \qquad P_y = \frac{2\sigma^2 J_{ww}\,\E[s_v^2 y_z^2]}{a^2}, \label{eq:Py}\\
+\varepsilon_m = \sigma^2\sqrt{\frac{\E[s_v^2 s_z^2]}{\E[s_v^2 y_z^2]}}. \nonumber
+\end{gather}
+We found $\varepsilon_m \leq 0.11$ on all focused states and $\varepsilon_m \leq 0.02$ on the strips.
+
+The spread $P_y$ is bounded below by an uncertainty principle. For a function $h$ on the plane, let
+\begin{equation}
+\xb(h) = \sigma^2\,\frac{\int \xi_v^2\,\xi_w^2\,|\hat h(\xi)|^2\,d\xi}{\int \xi_w^2\,|\hat h(\xi)|^2\,d\xi}
+\label{eq:xbar}
+\end{equation}
+be the mean squared wavenumber along the unstable direction, in units of $1/\sigma^2$, of the part of $h$ that varies along the stable direction.
+
+\begin{lemma}[Slice-wise Heisenberg]
+\label{lem:heisenberg}
+For every state,
+\begin{equation}
+P_y \geq \frac{1}{\Lambda}, \qquad \Lambda = \frac{\sigma^2\,\E[(s_v s_w - 2H_{vw})^2]}{J_{ww}} = 4\,\xb(\sqrt{\varrho}).
+\label{eq:heisenberg}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $F = s_v\sqrt{\varrho}$, so that $\E[s_v^2 y_z^2] = \int y_z^2 F^2$. On each line $v = \text{const}$, the Heisenberg inequality in $w$ with centre $w = -v$, where $(w + v)^2 = 2z^2$, gives $\int (w+v)^2 F^2\,dw \cdot \int (\partial_w F)^2\,dw \geq \frac14 \big(\int F^2\,dw\big)^2$~\cite{folland1997}. Summing over $v$ with the Cauchy--Schwarz inequality, $\E[s_v^2 y_z^2] \geq J_{vv}^2/(8\int(\partial_w F)^2)$. Since $\partial_w F = \frac12\sqrt{\varrho}\,(s_v s_w - 2H_{vw})$, this is Eq.~\eqref{eq:heisenberg}. For the identity, write $h = \sqrt\varrho$: then $s_w\sqrt\varrho = 2\partial_w h$ and $(s_v s_w - 2H_{vw})\sqrt{\varrho} = 4\partial_v\partial_w h$, and Parseval's theorem gives $\Lambda = 4\,\xb(h)$.
+\end{proof}
+
+The lemma has a direct observer reading. A state that is sharp along the unstable direction close to the line through the top, $y_z = 0$, must hold its sharpness on a narrow band in $w$ around $w = -v$ for every $v$. A narrow band in $w$ means fast variation along $w$ of the structure that produces the sharpness, and $\Lambda$ measures exactly that. Combining Theorem~\ref{thm:direct} with Eqs.~\eqref{eq:PwP}--\eqref{eq:heisenberg}:
+
+\begin{corollary}[Gap from the sharpness profile]
+\label{cor:regular}
+For every state,
+\begin{gather}
+g \geq \Pi\,\frac{\sqrt2}{\pi\sqrt{\Lambda}} = \frac{\Pi}{\pi\sqrt{2\,\xb(\sqrt\varrho)}}, \label{eq:regular}\\
+\Pi = \frac{a}{d}\,(1 - \varepsilon)_+(1 - \varepsilon_m)_+\sqrt{1 - \varepsilon_\pi^2} . \nonumber
+\end{gather}
+In particular, every family of states with $\xb(\sqrt\varrho) \leq X$ and with $\varepsilon$, $\varepsilon_m$, $\varepsilon_\pi$ and $d/a - 1$ bounded away from one has a gap of order $\sigma$, uniformly in $\sigma$.
+\end{corollary}
+
+The prefactor $\Pi$ collects explicit state quantities that were close to one on every focused state; all lower bounds below carry it. The rest of the article bounds $\Lambda$.
+
+For a Gaussian state whose covariance is diagonal in $(v,w)$ with variance $\Sigma_v \geq \sigma^2$ along $v$, $\xb(\sqrt\varrho) = \sigma^2/(4\Sigma_v) \leq 1/4$, and Eq.~\eqref{eq:regular} gives $g \gtrsim \sqrt2/\pi \approx 0.45$; the best Gaussian state has $g \to 1$~\cite{namba2026gap}. A small gap therefore needs \emph{fine structure}: a large $\xb$, that is, structure along the unstable direction on scales of order $\sigma$ or below, which varies along the stable direction. The next section shows how much of it the blur allows.

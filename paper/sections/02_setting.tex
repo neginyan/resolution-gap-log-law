@@ -1,0 +1,71 @@
+\section{Setting}
+\label{sec:setting}
+
+\subsection{Critical rate and gap}
+
+Let $\dot x = f(x)$ be a Hamiltonian flow and let the observer see $Y = X + \sigma Z$, where $X$ has density $\rho$ and $Z$ is standard normal. The coarse-grained density is $\varrho = \rho * N(0, \sigma^2 I)$. We write
+\begin{equation}
+s = \nabla\log\varrho, \qquad H = -\nabla^2\log\varrho, \qquad m = \E[X \mid Y = y],
+\end{equation}
+and $\E$ for the expectation over $Y \sim \varrho$. Tweedie's formula gives $m = y + \sigma^2 s$ and $\Cov(X \mid y) = \sigma^2 I - \sigma^4 H$~\cite{efron2011}. When the width grows as $\sigma(t) = \sigma_0 e^{rt}$, the coarse-grained entropy obeys Eq.~\eqref{eq:SC} with the critical rate~\cite{namba2026arrow,namba2026learned}
+\begin{equation}
+R = \frac{\E\big[s \cdot \E[f(X) \mid Y]\big]}{\sigma^2\,\E|s|^2}.
+\label{eq:R}
+\end{equation}
+Let $\kappa$ be the largest eigenvalue of the symmetric part of $Df$ over phase space. We study the \emph{gap in units of the resolution},
+\begin{equation}
+g = \frac{\kappa - R}{\sigma}.
+\end{equation}
+For every Gaussian state $g \geq 0$, and for the best Gaussian state of the pendulum $g \to 1$ as $\sigma \to 0$~\cite{namba2026gap}.
+
+\subsection{The top of the pendulum}
+
+For $H = p^2/2 - \cos q$ we use $z = q - \pi$, so that near the unstable top the flow is
+\begin{equation}
+\dot z = p, \qquad \dot p = \sin z,
+\end{equation}
+with $\kappa = 1$. The unstable and stable directions of the linearised flow are $V = (1,1)/\sqrt2$ and $W = (1,-1)/\sqrt2$ in the $(z,p)$ plane, with coordinates $v = (z + p)/\sqrt2$ and $w = (z - p)/\sqrt2$. Subscripts $v, w, z, p$ denote components in these directions, and
+\begin{gather}
+J_{vv} = \E[s_v^2], \qquad J_{ww} = \E[s_w^2], \nonumber\\
+a = \sigma^2 J_{vv}, \qquad d = \sigma^2(J_{vv} + J_{ww}).
+\end{gather}
+We call $a$ the \emph{sharpness} of the state: it is the Fisher information along the unstable direction in units of $\sigma^{-2}$. Since $\varrho$ is a $\sigma$-blur, $0 < a \leq 1$.
+
+The pendulum lives on a cylinder, and the analysis near the top needs the state to stay within about one fundamental domain. We use two moment conditions,
+\begin{gather}
+\text{(H1)} \qquad \E_Q[y_z^2] \leq \pi^2 + \sigma^2/2, \qquad Q = \varrho^2/\|\varrho\|^2, \nonumber\\
+\text{(H2)} \qquad \Var(X_z) \leq \pi^2 .
+\label{eq:H0}
+\end{gather}
+Both follow from $\rho = 0$ outside $|z| \leq \pi$ (for (H1) see Appendix~\ref{app:split}), but neither requires it: a Gaussian state, whose density never vanishes, satisfies both when it is narrow compared with $\pi$. Each result below states which condition it uses. Under (H2) the Cram\'er--Rao inequality $J \succeq \Cov(Y)^{-1}$~\cite{cover2006}, together with $e_w\cdot e_z = 1/\sqrt2$, gives
+\begin{equation}
+J_{ww} \geq \frac{1}{2\Var(Y_z)} \geq \frac{1}{2(\pi^2 + \sigma^2)},
+\label{eq:CR}
+\end{equation}
+so that $\ln\big(1/(\sigma^2 J_{ww})\big) \leq 2\ln(1/\sigma) + \ln\big(2(\pi^2 + \sigma^2)\big)$: the information along the stable direction cannot fall below a floor set by the confinement.
+
+\subsection{A formula without cancellation}
+
+In Eq.~\eqref{eq:R} the numerator contains two terms of order one that cancel up to the gap, which is of order $\sigma$, or much smaller in the states of Sec.~\ref{sec:strips}. The following form removes the cancellation analytically.
+
+\begin{proposition}[Gap formula]
+\label{prop:formula}
+For the pendulum near the top,
+\begin{equation}
+\sigma g = \frac{2\sigma^2 J_{ww} + N}{d}, \qquad N = \E[s_p D] = -\E[\partial_p D],
+\label{eq:formula}
+\end{equation}
+where $D(y) = \E[z - \sin z \mid Y = y]$ is the nonlinear part of the conditional velocity. Equivalently,
+\begin{equation}
+N = -\sigma^{-2}\,\E\big[\Cov(X_p,\, X_z - \sin X_z \mid Y)\big].
+\label{eq:Ncov}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+$\E[f(X)\mid y] = (m_p,\, m_z - D)$ in the $(z,p)$ components, so $s\cdot\E[f\mid y] = s_z m_p + s_p m_z - s_p D$. With $m = y + \sigma^2 s$, and $\E[s_z y_p] = \E[s_p y_z] = 0$ by integration by parts, one finds $\E[s_z m_p + s_p m_z] = 2\sigma^2\E[s_z s_p] = \sigma^2(J_{vv} - J_{ww})$. Inserting this in Eq.~\eqref{eq:R} with $\kappa = 1$ and $\sigma^2\E|s|^2 = d$ gives Eq.~\eqref{eq:formula}. The second form of $N$ follows from $\partial_y \E[h(X)\mid y] = \sigma^{-2}\Cov(h(X), X \mid y)$.
+\end{proof}
+
+Equation~\eqref{eq:formula} has a simple reading. The gap is the Fisher information along the stable direction, $2\sigma^2 J_{ww}$, plus the effect $N$ of the nonlinearity $z - \sin z$ of the pendulum, both divided by the total information $d$. For a sharp state, $d \approx a$. The gap is small when the state carries little information along the stable direction \emph{and} feels little nonlinearity, while being sharp along the unstable one. The rest of this article is about how far these demands can be met at the same time.
+
+In the numerical searches we also use the focus ratio $\Upsilon = \sigma J_{ww}/j$, with $j = \E[\min(\sigma^2 (H_{vv})_+,\, 1)]$, and restrict to $\Upsilon \leq 1/2$. This keeps the searches among focused states, in which the information along the stable direction is small compared with the sharpness $a$ and $a/d$ is close to one. All states discussed below satisfy it; none of the proofs requires it. We also write $t = \sigma^2$ for the variance of the blur when the blur is varied, as in Sec.~\ref{sec:removing}.

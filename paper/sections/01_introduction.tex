@@ -1,0 +1,56 @@
+\section{Introduction}
+\label{sec:intro}
+
+A Hamiltonian flow preserves the Gibbs entropy of every ensemble, yet an observer with a finite resolution sees an arrow of time. In a series of papers~\cite{namba2026arrow,namba2026gap,namba2026many,namba2026learned} this was made quantitative for an observer who looks through a Gaussian window whose width grows as $\sigma(t) = \sigma_0 e^{rt}$. The coarse-grained entropy $S$ obeys
+\begin{equation}
+\frac{dS}{dt} = \sigma^2\,\E|s|^2\,(r - R),
+\label{eq:SC}
+\end{equation}
+where $s$ is the score of the coarse-grained density and $R$ is a critical rate of the state. For every Gaussian state $R \leq \kappa$, the largest symmetric strain rate of the flow, and the best Gaussian state stays below $\kappa$ by a margin proportional to $\sigma$, the \emph{resolution gap}~\cite{namba2026gap}. For the pendulum the margin of the best Gaussian state tends to $\sigma$~\cite{namba2026gap}; in many degrees of freedom it is given by a matrix formula~\cite{namba2026many}. Since the same forward process, a flow followed by a widening blur, is the forward process of a phase-space diffusion model~\cite{dockhorn2022,namba2026threshold}, the margin can also be read from a score learned from samples~\cite{namba2026learned}.
+
+These results concern Gaussian states, and numerical searches over Gaussian mixtures. Reference~\cite{namba2026gap} left open whether \emph{every} state has a gap of order $\sigma$, that is, whether
+\begin{equation}
+\kappa - R \geq c\,\sigma \quad\text{for all states, with $c > 0$ independent of $\sigma$.}
+\label{eq:uniform}
+\end{equation}
+We call this the uniform-gap question. It decides whether the resolution gap is a property of the observer's resolution alone, or whether a cleverly prepared state can make the arrow of time appear arbitrarily close to $\kappa$.
+
+We study the question at the unstable top of the pendulum, $H = p^2/2 - \cos q$, where $\kappa = 1$. In observer language the answer is: \emph{fine structure along the stretching direction can narrow the gap, but it pays for it exponentially in sharpness, so the gap narrows only logarithmically.} Our results are the following.
+\begin{enumerate}
+\item \textbf{The uniform gap fails} (numerical). A family of ripple strips, Gaussian states carrying a ripple of wavenumber $k_0/\sigma$ along the unstable direction, reaches $(\kappa - R)/\sigma = 1/(2k_0)$ as $\sigma\to 0$, for every $k_0$ (Sec.~\ref{sec:strips}). The smallest gap at a given $\sigma$, $g_{\min}(\sigma)$, decreases to zero and follows $1.02/\sqrt{\ln(1/\sigma) - 23.4}$ for $\sigma \leq 10^{-24}$. Every value was confirmed by at least two evaluations that share no code, one of them written independently from closed-form expressions.
+\item \textbf{The gap is controlled by one number} (proved). An exact identity and the inequality of arithmetic and geometric means bound the gap from below by a weighted spread of the state (Theorem~\ref{thm:direct}). A slice-wise Heisenberg inequality turns this into a lower bound of order $1/\sqrt{\xb}$ for every state, where $\xb$ is the mean squared wavenumber of the blurred density along the unstable direction (Lemma~\ref{lem:heisenberg}, Corollary~\ref{cor:regular}).
+\item \textbf{Fine structure is limited logarithmically} (proved under one ratio condition). A smoothing--uncertainty lemma with a split blur shows that the blur removes fine structure exponentially in $\xb$, while the confinement of the state near the top keeps a minimum of structure along the stable direction. Together they give $\xb \leq 2\ln(1/\sigma) + O(1)$ and the logarithmic lower bound
+\begin{equation}
+\kappa - R \geq \frac{c\,\sigma}{\sqrt{\ln(1/\sigma) + C}}
+\label{eq:loglaw}
+\end{equation}
+with explicit $c$ and $C$, for states whose ratio $K_\Lambda$ of two measures of fineness is bounded (Theorem~\ref{thm:log}).
+\item \textbf{The ratio condition can be removed, and the strips are covered} (proved). Following the Fisher information along the stable direction as the blur grows, we find that the only thing that can make the observer lose it faster is a valley of the blurred density, and we prove that deep valleys are paid for in Fisher information (Theorem~\ref{thm:valley}). This gives Eq.~\eqref{eq:loglaw} without the ratio condition for product states in any orientation (Theorem~\ref{thm:product}) and for every state whose posterior covariance stays below a fixed multiple of the blur (Proposition~\ref{prop:novalley}). The strips, which realise the smallest gaps we found, are in this class: they never form deep valleys (numerical, Sec.~\ref{sec:novalley}).
+\end{enumerate}
+The two sides meet: the strips show that the gap can shrink like $1/\sqrt{\ln(1/\sigma)}$, and the theorems show that it cannot shrink faster, for every state with a bounded ratio and, without any ratio condition, for the classes that contain the strips themselves. For general states with deep valleys the logarithmic law without the ratio condition is stated as Conjecture~\ref{conj:general}; no counterexample is known.
+
+The effect is invisible at practical resolutions. Gaussian mixtures with up to 32 components never went below $0.884\,\sigma$, and the strips go below this only for $\sigma \lesssim 7\times 10^{-6}$. Table~\ref{tab:status} lists the status of every claim. Throughout, we separate what is proved, what is assumed, what is observed numerically and what is conjectured.
+
+\begin{table}[t]
+\caption{Status of the main claims. Proved: complete argument, checked numerically as an identity or inequality on all states. Proved under X: the hypothesis X is stated in the result. Numerical: observed, with the evaluations described in Appendix~\ref{app:methods}. Conjecture: supported by the numerics, not proved. False: a counterexample is given.}
+\label{tab:status}
+\begin{ruledtabular}
+\footnotesize
+\begin{tabular}{@{}p{0.6\columnwidth}l@{}}
+claim & status \\
+\hline
+gap formula, Prop.~\ref{prop:formula}; direct bound, Thm.~\ref{thm:direct} & proved \\
+gap $\gtrsim 1/\sqrt{\xb}$ for every state, Cor.~\ref{cor:regular} & proved \\
+split smoothing--uncertainty, Lemma~\ref{lem:split} & proved \\
+log law, Thm.~\ref{thm:log} & proved under $K_\Lambda \leq K_1$ \\
+universal bound on $K_\Lambda$ & false \\
+valleys cost Fisher information, Thm.~\ref{thm:valley} & proved \\
+log law for 1-d and product states, Thm.~\ref{thm:product} & proved \\
+log law without deep valleys (covers the strips), Prop.~\ref{prop:novalley} & proved \\
+strips have no deep valleys & numerical \\
+log law for all states, Conj.~\ref{conj:general} & conjecture \\
+strips: $g \to 1/(2k_0)$; $g_{\min}(\sigma) \to 0$ & numerical \\
+uniform gap~\eqref{eq:uniform} & false (numerical) \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
