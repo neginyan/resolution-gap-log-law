@@ -2,10 +2,12 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neginyan/resolution-gap-log-law/blob/main/demo/resolution_gap_log_law.ipynb)
 [![verify](https://github.com/neginyan/resolution-gap-log-law/actions/workflows/verify.yml/badge.svg)](https://github.com/neginyan/resolution-gap-log-law/actions/workflows/verify.yml)
+[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23617343.svg)](https://doi.org/10.5281/zenodo.23617343)
+[![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23616985.svg)](https://doi.org/10.5281/zenodo.23616985)
 
 Code, results and verification for the paper
 
-> T. Namba, *Is the resolution gap of the arrow of time uniform?*, preprint v1.0, Zenodo (2026), [paper DOI].
+> T. Namba, *Is the resolution gap of the arrow of time uniform?*, preprint v1.0, Zenodo (2026), [doi:10.5281/zenodo.23617343](https://doi.org/10.5281/zenodo.23617343).
 
 It continues four earlier papers:
 
@@ -68,4 +70,4 @@ MIT (see [`LICENSE`](LICENSE)).
 
 ## Citation
 
-Taishi Namba, *Is the resolution gap of the arrow of time uniform?*, [paper DOI]. Code: [code DOI]. See also [`CITATION.cff`](CITATION.cff).
+Taishi Namba, *Is the resolution gap of the arrow of time uniform?*, preprint v1.0, Zenodo (2026), [doi:10.5281/zenodo.23617343](https://doi.org/10.5281/zenodo.23617343). Code: [doi:10.5281/zenodo.23616985](https://doi.org/10.5281/zenodo.23616985) (all versions; v1.0.0 is [doi:10.5281/zenodo.23616986](https://doi.org/10.5281/zenodo.23616986)). See also [`CITATION.cff`](CITATION.cff).
