@@ -1,0 +1,90 @@
+[
+ {
+  "family": "CH",
+  "sigma": 1e-12,
+  "x_indep_final": 0.3352244839711837,
+  "w_full": 0.335226526457735,
+  "one_period_plus_vspread": 0.3352240314907783,
+  "single_strip": 0.3348670437788307,
+  "period_over_Lv": 3.162494469520525e-05,
+  "rel_w_full": 6.092891924547317e-06,
+  "rel_one_period": 1.349783285697903e-06
+ },
+ {
+  "family": "CH",
+  "sigma": 1e-24,
+  "x_indep_final": 0.17952407874638107,
+  "w_full": 0.17955134049435575,
+  "one_period_plus_vspread": 0.1795240723670791,
+  "single_strip": 0.1793786930916538,
+  "period_over_Lv": 4.4077603612970726e-11,
+  "rel_w_full": 0.00015185566284503516,
+  "rel_one_period": 3.5534520104185674e-08
+ },
+ {
+  "family": "H2",
+  "sigma": 1e-12,
+  "x_indep_final": 0.33546120263567747,
+  "w_full": 0.3354641422699068,
+  "one_period_plus_vspread": 0.3354615257264396,
+  "single_strip": 0.3348670437788307,
+  "period_over_Lv": 1.0342548399926092e-05,
+  "rel_w_full": 8.762963365605003e-06,
+  "rel_one_period": 9.631240800445084e-07
+ },
+ {
+  "family": "H2",
+  "sigma": 1e-24,
+  "x_indep_final": 0.17955236336695554,
+  "w_full": 0.1795585121649167,
+  "one_period_plus_vspread": 0.1795523211566597,
+  "single_strip": 0.1793786930916538,
+  "period_over_Lv": 1.4958488448225288e-11,
+  "rel_w_full": 3.4245151920409e-05,
+  "rel_one_period": 2.35086272559748e-07
+ },
+ {
+  "family": "H3",
+  "sigma": 1e-12,
+  "x_indep_final": 0.3400900130138824,
+  "w_full": 0.34008716048820653,
+  "one_period_plus_vspread": 0.3400917691759748,
+  "single_strip": 0.3348670437788307,
+  "period_over_Lv": 1.033897768574421e-05,
+  "rel_w_full": 8.387560841982555e-06,
+  "rel_one_period": 5.163815534503513e-06
+ },
+ {
+  "family": "H3",
+  "sigma": 1e-24,
+  "x_indep_final": 0.18041848758327528,
+  "w_full": 0.18040759486457084,
+  "one_period_plus_vspread": 0.1804274293933309,
+  "single_strip": 0.1793786930916538,
+  "period_over_Lv": 1.4619535852578654e-11,
+  "rel_w_full": 6.037473681519412e-05,
+  "rel_one_period": 4.956149547297173e-05
+ },
+ {
+  "family": "MW",
+  "sigma": 1e-12,
+  "x_indep_final": 0.3351117862639615,
+  "w_full": 0.33510971404017287,
+  "one_period_plus_vspread": 0.3351100908962212,
+  "single_strip": 0.3348670437788307,
+  "period_over_Lv": 1.0531993669420016e-05,
+  "rel_w_full": 6.1836792185632206e-06,
+  "rel_one_period": 5.059111048311138e-06
+ },
+ {
+  "family": "MW",
+  "sigma": 1e-24,
+  "x_indep_final": 0.17949654199855947,
+  "w_full": 0.17950432039958084,
+  "one_period_plus_vspread": 0.17949808864929506,
+  "single_strip": 0.1793786930916538,
+  "period_over_Lv": 1.4683243600877047e-11,
+  "rel_w_full": 4.3334545249518186e-05,
+  "rel_one_period": 8.616604634026359e-06
+ }
+]

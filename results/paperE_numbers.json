@@ -1,0 +1,1142 @@
+[
+ {
+  "sec": "1 mixtures",
+  "name": "min gap/sigma over Gaussian mixtures (K32 hourglass, sigma = 1e-2)",
+  "value": 0.8840083350093009,
+  "src": "summary_T.json:T4_min.opt_P_sharp.gap"
+ },
+ {
+  "sec": "1 mixtures",
+  "name": "min P# (same state)",
+  "value": 0.7914462836998037,
+  "src": "summary_T.json:T4_min.opt_P_sharp.opt_P_sharp"
+ },
+ {
+  "sec": "1 mixtures",
+  "name": "F of the same state",
+  "value": 0.8985490470118522,
+  "src": "summary_T.json:T4_min.opt_P_sharp.F"
+ },
+ {
+  "sec": "1 mixtures",
+  "name": "y/sigma of the same state",
+  "value": 0.23143512811799527,
+  "src": "summary_T.json:T4_min.opt_P_sharp.y_over_sigma"
+ },
+ {
+  "sec": "2 chain",
+  "name": "states evaluated (stored + adversarial)",
+  "value": 377.0,
+  "src": "t1_chain.json:len"
+ },
+ {
+  "sec": "2 chain",
+  "name": "states with y/sigma <= 1/2",
+  "value": 231.0,
+  "src": "t1_chain.json:[y_over_sigma<=0.5]"
+ },
+ {
+  "sec": "2 chain",
+  "name": "max Lambda in y/sigma <= 1/2",
+  "value": 2.3794671488298675,
+  "src": "t1_chain.json:[y<=0.5].Lambda max"
+ },
+ {
+  "sec": "2 chain",
+  "name": "min x^2 J_ww/(a I(p~)) (bound_ptilde) in y/sigma <= 1/2",
+  "value": 0.7618561046610386,
+  "src": "t1_chain.json:[y<=0.5].bound_ptilde min"
+ },
+ {
+  "sec": "2 chain",
+  "name": "max a I(p~)/J_ww in y/sigma <= 1/2",
+  "value": 1.3074485477450717,
+  "src": "t1_chain.json:[y<=0.5].aIpt_over_Jww max"
+ },
+ {
+  "sec": "2 chain",
+  "name": "min x^2/Lambda (bound_Lambda) in y/sigma <= 1/2",
+  "value": 0.41267781306485474,
+  "src": "t1_chain.json:[y<=0.5].bound_Lambda min"
+ },
+ {
+  "sec": "2 chain",
+  "name": "chain violations (bound_ptilde > P# or bound_Lambda > bound_ptilde), all states",
+  "value": 0.0,
+  "src": "t1_chain.json:all"
+ },
+ {
+  "sec": "3 Var(phi)",
+  "name": "proved constant (sqrt(3/4) + 1.5 sqrt 2)^2",
+  "value": 8.924234614174766,
+  "src": "formula (stage T1)"
+ },
+ {
+  "sec": "3 Var(phi)",
+  "name": "largest Var(phi) found (adversarial 1-d mixtures)",
+  "value": 4.180368347414028,
+  "src": "t1_var1d.json:searches[mode=V].Var_phi max"
+ },
+ {
+  "sec": "3 Var(phi)",
+  "name": "largest Var(phi) found (combs)",
+  "value": 4.415091784833729,
+  "src": "t1_var1d.json:comb.Var_phi max"
+ },
+ {
+  "sec": "4 lemma (x)",
+  "name": "states where |x - 1| <= sd_p~(mu) sqrt(I(p~)) fails (bound 1)",
+  "value": 0.0,
+  "src": "t1_chain.json:x_minus_1, x_bound_ptilde"
+ },
+ {
+  "sec": "4 lemma (x)",
+  "name": "max x_bound/sqrt(sigma) (bound 1, y/sigma <= 1/2)",
+  "value": 60.80143759585372,
+  "src": "t1_chain.json:[y<=0.5].x_bound_over_sqrt_sigma max"
+ },
+ {
+  "sec": "4 lemma (x)",
+  "name": "states where |x - 1| <= new bound fails (bound 2, exact identity)",
+  "value": 0.0,
+  "src": "u2_chain.json:states"
+ },
+ {
+  "sec": "4 lemma (x)",
+  "name": "two clusters: max sd_p~(mu)/sigma (bound 1 is not uniform)",
+  "value": 59.99704299981482,
+  "src": "u2_chain.json:two_clusters.sd_ptilde_mu_over_sigma max"
+ },
+ {
+  "sec": "4 lemma (x)",
+  "name": "two clusters: max new bound (bound 2 stays small)",
+  "value": 0.0382790000447738,
+  "src": "u2_chain.json:two_clusters.x_bound_new max"
+ },
+ {
+  "sec": "5 families",
+  "name": "lattice: max rel. deviation of a I(p~)/J_ww from 4 k0^2 (c <= 0.1)",
+  "value": 3.9836297105466656e-07,
+  "src": "u1_lattice.json:rows[c<=0.1]"
+ },
+ {
+  "sec": "5 families",
+  "name": "lattice k0 = 1: a I(p~)/J_ww (4 k0^2 = 4)",
+  "value": 4.000000354334196,
+  "src": "u1_lattice.json:rows[k0=1,q0=0.3,c=0.1]"
+ },
+ {
+  "sec": "5 families",
+  "name": "lattice k0 = 2: a I(p~)/J_ww (4 k0^2 = 16)",
+  "value": 16.000000003503054,
+  "src": "u1_lattice.json:rows[k0=2,q0=0.3,c=0.1]"
+ },
+ {
+  "sec": "5 families",
+  "name": "lattice k0 = 3: a I(p~)/J_ww (4 k0^2 = 36)",
+  "value": 36.00000000000036,
+  "src": "u1_lattice.json:rows[k0=3,q0=0.3,c=0.1]"
+ },
+ {
+  "sec": "5 families",
+  "name": "normalised patches: max a I(p~)/J_ww",
+  "value": 11.651245145946898,
+  "src": "u1_patch.json:[sigma<0.5,q0<0.5] max"
+ },
+ {
+  "sec": "5 families",
+  "name": "localised ripples (y/sigma <= 1/2): min a I(p~)/J_ww",
+  "value": 3.8806167163776957,
+  "src": "u3_ripple.json:ripple_local[Y0=0.5] min"
+ },
+ {
+  "sec": "5 families",
+  "name": "localised ripples: min gap/sigma (not counterexamples to the gap)",
+  "value": 6.828959909717236,
+  "src": "u3_ripple.json:ripple_local.gap_over_sigma min"
+ },
+ {
+  "sec": "5 families",
+  "name": "mixtures: max a I(p~)/J_ww (y/sigma <= 1/2)",
+  "value": 1.3074485477450717,
+  "src": "t1_chain.json (= 2 chain)"
+ },
+ {
+  "sec": "5 families",
+  "name": "1-d comb: max |D/(4 k0^2) - 1|",
+  "value": 0.0024196378905612104,
+  "src": "s1_gamma1d_comb.json:[spacing<=3]"
+ },
+ {
+  "sec": "5 families",
+  "name": "V-periodic strip k0 = 1.5: B2 at the largest M (limit 1/(4 k0^2) = 0.1111)",
+  "value": 0.11376920272508788,
+  "src": "v1_vperiodic.json:rows[k0=1.5,lam=3,M=3000].B2"
+ },
+ {
+  "sec": "6 gap formula",
+  "name": "finite strip sigma = 0.01 (stage V optimum), gap/sigma",
+  "value": 2.411420276916632,
+  "src": "w_recheck_V.json:finite_strips[sigma=0.01].new_ibp"
+ },
+ {
+  "sec": "6 gap formula",
+  "name": "finite strip sigma = 0.001 (stage V optimum), gap/sigma",
+  "value": 1.488676721291264,
+  "src": "w_recheck_V.json:finite_strips[sigma=0.001].new_ibp"
+ },
+ {
+  "sec": "6 gap formula",
+  "name": "finite strip sigma = 1e-06 (stage V optimum), gap/sigma",
+  "value": 0.8236856039861297,
+  "src": "w_recheck_V.json:finite_strips[sigma=1e-06].new_ibp"
+ },
+ {
+  "sec": "6 gap formula",
+  "name": "stage-U ripples: max rel. difference old/new point fields",
+  "value": 6.439293542825908e-15,
+  "src": "w_recheck_V.json:ripple_U"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 1.5 (1/(2k0) = 0.3333)",
+  "value": 0.3333165447550134,
+  "src": "w1_klimit.json:rows[k0=1.5].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 2 (1/(2k0) = 0.2500)",
+  "value": 0.24999884243553205,
+  "src": "w1_klimit.json:rows[k0=2].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 2.5 (1/(2k0) = 0.2000)",
+  "value": 0.19999934493350702,
+  "src": "w1_klimit.json:rows[k0=2.5].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 3 (1/(2k0) = 0.1667)",
+  "value": 0.1666662475833924,
+  "src": "w1_klimit.json:rows[k0=3].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 4 (1/(2k0) = 0.1250)",
+  "value": 0.12500000000032754,
+  "src": "w1_klimit.json:rows[k0=4].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 5 (1/(2k0) = 0.1000)",
+  "value": 0.10000000168578996,
+  "src": "w1_klimit.json:rows[k0=5].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma -> 0 (sigma = 1e-80): min gap/sigma at k0 = 6 (1/(2k0) = 0.0833)",
+  "value": 0.08341387604688265,
+  "src": "w1_klimit.json:rows[k0=6].opt_gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "k0 = 7 at sigma = 1e-80 (too expensive)",
+  "value": 3.2772466807828904,
+  "src": "w1_klimit.json:rows[k0=7]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 0.01)/sigma",
+  "value": 1.8180011702109034,
+  "src": "summary_W.json:gmin_best[0.01]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 0.0001)/sigma (converged; the u_cgm search grid, capped at 8e6 points, gave 1.1484)",
+  "value": 1.1491335363178028,
+  "src": "x4_states_for_main.json:states[sigma=0.0001].A_x_indep.gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-05)/sigma",
+  "value": 0.9143221935309261,
+  "src": "summary_W.json:gmin_best[1e-05]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-06)/sigma",
+  "value": 0.7402823676333057,
+  "src": "summary_W.json:gmin_best[1e-06]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-12)/sigma",
+  "value": 0.3348670437788307,
+  "src": "summary_W.json:gmin_best[1e-12]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-24)/sigma",
+  "value": 0.17937869304545098,
+  "src": "summary_W.json:gmin_best[1e-24]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-48)/sigma",
+  "value": 0.11041532370353448,
+  "src": "summary_W.json:gmin_best[1e-48]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "g_min(sigma = 1e-96)/sigma",
+  "value": 0.07277524900222734,
+  "src": "summary_W.json:gmin_best[1e-96]"
+ },
+ {
+  "sec": "7 strips",
+  "name": "log-law fit A (g = A/sqrt(ln(1/sigma) - B), sigma <= 1e-24)",
+  "value": 1.024068630087732,
+  "src": "summary_W.json:fit_opt_loglaw.A"
+ },
+ {
+  "sec": "7 strips",
+  "name": "log-law fit B",
+  "value": 23.40341685458893,
+  "src": "summary_W.json:fit_opt_loglaw.B"
+ },
+ {
+  "sec": "7 strips",
+  "name": "log-law fit max residual",
+  "value": 0.011450633346707928,
+  "src": "summary_W.json:fit_opt_loglaw.max_rel_resid"
+ },
+ {
+  "sec": "7 strips",
+  "name": "local exponent d ln g/d ln ln(1/sigma), 1e-06 -> 1e-12",
+  "value": -1.144487267270582,
+  "src": "summary_W.json:local_exponent"
+ },
+ {
+  "sec": "7 strips",
+  "name": "local exponent d ln g/d ln ln(1/sigma), 1e-12 -> 1e-24",
+  "value": -0.9005798643411991,
+  "src": "summary_W.json:local_exponent"
+ },
+ {
+  "sec": "7 strips",
+  "name": "local exponent d ln g/d ln ln(1/sigma), 1e-24 -> 1e-48",
+  "value": -0.7000681279563579,
+  "src": "summary_W.json:local_exponent"
+ },
+ {
+  "sec": "7 strips",
+  "name": "local exponent d ln g/d ln ln(1/sigma), 1e-48 -> 1e-96",
+  "value": -0.6014206310058795,
+  "src": "summary_W.json:local_exponent"
+ },
+ {
+  "sec": "7 strips",
+  "name": "sigma below which strips beat 0.884 sigma",
+  "value": 7.1162866286148216e-06,
+  "src": "summary_W.json:cross_0884.sigma_cross"
+ },
+ {
+  "sec": "7 strips",
+  "name": "X4 state sigma = 0.0001: gap/sigma (two code-disjoint evaluators: max rel. diff 2.9e-05)",
+  "value": 1.1491335363178028,
+  "src": "x4_states_for_main.json:states[sigma=0.0001].A_x_indep.gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "X4 state sigma = 1e-06: gap/sigma (two code-disjoint evaluators: max rel. diff 2.3e-05)",
+  "value": 0.7402823676333079,
+  "src": "x4_states_for_main.json:states[sigma=1e-06].A_x_indep.gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "X4 state sigma = 1e-12: gap/sigma (two code-disjoint evaluators: max rel. diff 4.3e-05)",
+  "value": 0.33486704377883053,
+  "src": "x4_states_for_main.json:states[sigma=1e-12].A_x_indep.gap_over_sigma"
+ },
+ {
+  "sec": "7 strips",
+  "name": "X4 state sigma = 1e-24: gap/sigma (two code-disjoint evaluators: max rel. diff 1.6e-04)",
+  "value": 0.17937869309165086,
+  "src": "x4_states_for_main.json:states[sigma=1e-24].A_x_indep.gap_over_sigma"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "max |N2/N - 1| (second-order form of N)",
+  "value": 0.007398727928771942,
+  "src": "w2_states.json:N2_over_N"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Theorem W': states",
+  "value": 35.0,
+  "src": "x1_states.json:len"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Theorem W': states where the bound exceeds the gap",
+  "value": 0.0,
+  "src": "x1_states.json:bound_le_gap"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Theorem W': max |eps|",
+  "value": 0.004210791304530748,
+  "src": "x1_states.json:eps"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Theorem W': max eps_B/sqrt(sigma)",
+  "value": 2.8915986387781976,
+  "src": "x1_states.json:eps_B_absbound/sqrt(sigma)"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "R3/B on mixtures and clusters: min",
+  "value": 0.4566135533220498,
+  "src": "x1_states.json"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "R3/B on mixtures and clusters: max",
+  "value": 0.5075630559313431,
+  "src": "x1_states.json"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Lemma X2: max ratio on random 1-d structures",
+  "value": 0.9992214590456434,
+  "src": "x2_lemma.json:max_ratio_random"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Lemma X2: random structures tested",
+  "value": 400.0,
+  "src": "x2_lemma.json:random"
+ },
+ {
+  "sec": "8 theorem",
+  "name": "Lemma X2 transfer: max C on strip windows",
+  "value": 0.14273884337742218,
+  "src": "x2_lemma.json:transfer_strips.C_needed max"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "CH at sigma = 1e-12: best/single strip - 1",
+  "value": 0.0010674092867408724,
+  "src": "x3_verify.json:[CH,1e-12]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "CH at sigma = 1e-24: best/single strip - 1",
+  "value": 0.0008104956738255176,
+  "src": "x3_verify.json:[CH,1e-24]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "H2 at sigma = 1e-12: best/single strip - 1",
+  "value": 0.0017743127246621082,
+  "src": "x3_verify.json:[H2,1e-12]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "H2 at sigma = 1e-24: best/single strip - 1",
+  "value": 0.0009681767232689875,
+  "src": "x3_verify.json:[H2,1e-24]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "H3 at sigma = 1e-12: best/single strip - 1",
+  "value": 0.015597143200814179,
+  "src": "x3_verify.json:[H3,1e-12]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "H3 at sigma = 1e-24: best/single strip - 1",
+  "value": 0.0057966443711918725,
+  "src": "x3_verify.json:[H3,1e-24]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "MW at sigma = 1e-12: best/single strip - 1",
+  "value": 0.0007308646511432482,
+  "src": "x3_verify.json:[MW,1e-12]"
+ },
+ {
+  "sec": "9 beyond",
+  "name": "MW at sigma = 1e-24: best/single strip - 1",
+  "value": 0.000656983863994709,
+  "src": "x3_verify.json:[MW,1e-24]"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "R3 bound holds on mixture/cluster states (count of 13)",
+  "value": 13.0,
+  "src": "y3_r3.json:holds"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "max |R3|/bound",
+  "value": 0.5076264581651495,
+  "src": "y3_r3.json:ratio_R3_to_bound max"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "max eps_R3 bound (state quantities)",
+  "value": 0.015511710535051031,
+  "src": "y3_r3.json:eps_R3_bound max"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "P# >= x^2/(1 + Dbar): max bound/P# over 377 states",
+  "value": 0.5081996980775013,
+  "src": "y3_a2.json:chain_ii.max_ratio"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "min x^2/(1 + Dbar) in y/sigma <= 1/2",
+  "value": 0.22576928295073262,
+  "src": "y3_a2.json:chain_ii.region_min_bound"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "line bound D <= 8 xl + 2 sigma^4 E[s^4]/omega: max ratio (300 1-d densities)",
+  "value": 0.49955962671748944,
+  "src": "y3_a2.json:line_iii.max_ratio"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "observed max D/(1 + 8 xl)",
+  "value": 0.48573517608941513,
+  "src": "y3_a2.json:line_iii.max_D_over_1p8xl"
+ },
+ {
+  "sec": "10 Y3",
+  "name": "Lemma X2' (second spectral moment): max ratio",
+  "value": 0.997737706228908,
+  "src": "y3_a2.json:lemma_iv.max_ratio"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Theorem Z on the strip family: K_Lambda max (enters c)",
+  "value": 0.9898644527225526,
+  "src": "summary_Z.json:theorem_constants_strips.K1_max_K_Lambda"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Theorem Z on the strip family: K_J K_rho max (enters C)",
+  "value": 2.0631243131294736,
+  "src": "summary_Z.json:theorem_constants_strips.K2_max_KJ_Krho"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Theorem Z constant c = 1/(2 pi sqrt K_Lambda)",
+  "value": 0.15996768777096648,
+  "src": "summary_Z.json:theorem_constants_strips.c"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Theorem Z constant C = ln(2 (pi^2 + 1) K_J K_rho / e)/2",
+  "value": 1.4016694890423917,
+  "src": "summary_Z.json:theorem_constants_strips.C"
+ },
+ {
+  "sec": "11 Z",
+  "name": "log-law coefficient A of the strips divided by c (looseness of the uniform constant)",
+  "value": 6.401917876479241,
+  "src": "summary_Z.json:theorem_constants_strips.A_over_c"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 0.01: gap/sigma over the Theorem Z curve",
+  "value": 27.85384873160798,
+  "src": "summary_Z.json:strips[sigma=0.01].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 0.0001: gap/sigma over the Theorem Z curve",
+  "value": 23.40114212749908,
+  "src": "summary_Z.json:strips[sigma=0.0001].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-05: gap/sigma over the Theorem Z curve",
+  "value": 20.540429408197816,
+  "src": "summary_Z.json:strips[sigma=1e-05].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-06: gap/sigma over the Theorem Z curve",
+  "value": 18.052286917931813,
+  "src": "summary_Z.json:strips[sigma=1e-06].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-12: gap/sigma over the Theorem Z curve",
+  "value": 11.279342485380981,
+  "src": "summary_Z.json:strips[sigma=1e-12].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-24: gap/sigma over the Theorem Z curve",
+  "value": 8.44094553055091,
+  "src": "summary_Z.json:strips[sigma=1e-24].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-48: gap/sigma over the Theorem Z curve",
+  "value": 7.302340787913841,
+  "src": "summary_Z.json:strips[sigma=1e-48].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-96: gap/sigma over the Theorem Z curve",
+  "value": 6.785211580196967,
+  "src": "summary_Z.json:strips[sigma=1e-96].gap_over_theorem"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-12: K_Lambda",
+  "value": 0.8494279187738087,
+  "src": "summary_Z.json:strips[sigma=1e-12].K_Lambda"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-12: xbar_w",
+  "value": 3.0775855438421122,
+  "src": "summary_Z.json:strips[sigma=1e-12].xbar_w"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-12: Xi",
+  "value": 4.762405870234936,
+  "src": "summary_Z.json:strips[sigma=1e-12].Xi"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-12: Theorem Z bound with state constants (gap/sigma)",
+  "value": 0.11190733942719695,
+  "src": "summary_Z.json:strips[sigma=1e-12].bound_state"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-96: K_Lambda",
+  "value": 0.9898644527225526,
+  "src": "summary_Z.json:strips[sigma=1e-96].K_Lambda"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-96: xbar_w",
+  "value": 48.17196357195875,
+  "src": "summary_Z.json:strips[sigma=1e-96].xbar_w"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-96: Xi",
+  "value": 52.593075406690886,
+  "src": "summary_Z.json:strips[sigma=1e-96].Xi"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip sigma = 1e-96: Theorem Z bound with state constants (gap/sigma)",
+  "value": 0.03119485574580045,
+  "src": "summary_Z.json:strips[sigma=1e-96].bound_state"
+ },
+ {
+  "sec": "11 Z",
+  "name": "step violations (steps 0-8) on the x1 states (33 states)",
+  "value": 0.0,
+  "src": "summary_Z.json:steps_x1"
+ },
+ {
+  "sec": "11 Z",
+  "name": "step violations (steps 0-8) on the stored + adversarial states (377 states)",
+  "value": 0.0,
+  "src": "summary_Z.json:steps_stored"
+ },
+ {
+  "sec": "11 Z",
+  "name": "step violations (steps 0-8) on the strips (8 states)",
+  "value": 0.0,
+  "src": "summary_Z.json:steps_strips"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Lambda: max rel. difference to the stage-T code over 377 states",
+  "value": 0.000998445922684832,
+  "src": "summary_Z.json:vs_t1_chain.max_rel_Lambda"
+ },
+ {
+  "sec": "11 Z",
+  "name": "Lemma Z1 identity Lambda = 4 xbar_w(sqrt p) by FFT: max rel. deviation",
+  "value": 3.606176348558421e-05,
+  "src": "summary_Z.json:identity"
+ },
+ {
+  "sec": "11 Z",
+  "name": "lattice: max K_Lambda",
+  "value": 1.0386886946020137,
+  "src": "summary_Z.json:lattice.K_Lambda_range"
+ },
+ {
+  "sec": "11 Z",
+  "name": "grating mixture (adversarial): K_Lambda range max (y/sigma <= 1/2)",
+  "value": 0.6003180497829153,
+  "src": "summary_Z.json:K_by_family[grating mixture (adversarial)].K_Lambda_max_y_le_half"
+ },
+ {
+  "sec": "11 Z",
+  "name": "mixture (adversarial): K_Lambda range max (y/sigma <= 1/2)",
+  "value": 0.6896337934837721,
+  "src": "summary_Z.json:K_by_family[mixture (adversarial)].K_Lambda_max_y_le_half"
+ },
+ {
+  "sec": "11 Z",
+  "name": "mixture (stored): K_Lambda range max (y/sigma <= 1/2)",
+  "value": 0.9058081453738228,
+  "src": "summary_Z.json:K_by_family[mixture (stored)].K_Lambda_max_y_le_half"
+ },
+ {
+  "sec": "11 Z",
+  "name": "strip (g_min optimum): K_Lambda range max (y/sigma <= 1/2)",
+  "value": 0.944595431757462,
+  "src": "summary_Z.json:K_by_family[strip (g_min optimum)].K_Lambda_max_y_le_half"
+ },
+ {
+  "sec": "12 AA",
+  "name": "AA1 steps (split Jensen, cut, kernel ratio, L2 Heisenberg, final): violations over 830 evaluations",
+  "value": 0.0,
+  "src": "summary_AA.json:aa1_steps"
+ },
+ {
+  "sec": "12 AA",
+  "name": "L2 Heisenberg (D): min ratio |d_w p|^2 8 E_Q[y_z^2]/|p|^2",
+  "value": 1.000000000015609,
+  "src": "summary_AA.json:aa1_steps.D_heis_L2.min_ratio"
+ },
+ {
+  "sec": "12 AA",
+  "name": "max E_Q[y_z^2] over all states (H0 bound pi^2 + sigma^2/2)",
+  "value": 1.0368788676581218,
+  "src": "summary_AA.json:E_Q_max"
+ },
+ {
+  "sec": "12 AA",
+  "name": "Theorem Z' (state constants): min gap/bound over the states with the gap known",
+  "value": 5.894112239766973,
+  "src": "summary_AA.json:gap_over_bound_state_min"
+ },
+ {
+  "sec": "12 AA",
+  "name": "Theorem Z', t = 1/2: c sqrt(K1)",
+  "value": 0.11253953951963826,
+  "src": "summary_AA.json:constants.t_half"
+ },
+ {
+  "sec": "12 AA",
+  "name": "Theorem Z', t = 1/2: C",
+  "value": 2.4023073879566197,
+  "src": "summary_AA.json:constants.t_half"
+ },
+ {
+  "sec": "12 AA",
+  "name": "eps_m-free factor kappa_u (sigma -> 0)",
+  "value": 0.16952084719853722,
+  "src": "summary_AA.json:constants.kappa_uniform_sigma_to_0"
+ },
+ {
+  "sec": "12 AA",
+  "name": "AA3: r <= sqrt(12 V_z) Y, min ratio",
+  "value": 1.4101315299958128,
+  "src": "summary_AA.json:aa1_steps.AA3_r"
+ },
+ {
+  "sec": "12 AA",
+  "name": "AA3: G >= (1 - eps) Y, min ratio",
+  "value": 2.497775295544613,
+  "src": "summary_AA.json:aa1_steps.AA3_GY"
+ },
+ {
+  "sec": "12 AA",
+  "name": "product family sigma = 0.01: K_Lambda (y/sigma = 0.11, sqrt(P_w) >= 2.2)",
+  "value": 0.6970786521910575,
+  "src": "aa_product.json:[sigma=0.01].K_Lambda"
+ },
+ {
+  "sec": "12 AA",
+  "name": "product family sigma = 0.0001: K_Lambda (y/sigma = 0.19, sqrt(P_w) >= 29.7)",
+  "value": 1.6692679951289648,
+  "src": "aa_product.json:[sigma=0.0001].K_Lambda"
+ },
+ {
+  "sec": "12 AA",
+  "name": "product family sigma = 1e-06: K_Lambda (y/sigma = 0.27, sqrt(P_w) >= 360)",
+  "value": 5.271403729236347,
+  "src": "aa_product.json:[sigma=1e-06].K_Lambda"
+ },
+ {
+  "sec": "12 AA",
+  "name": "product family sigma = 1e-09: K_Lambda (y/sigma = 0.38, sqrt(P_w) >= 1.71e+04)",
+  "value": 23.49685841030876,
+  "src": "aa_product.json:[sigma=1e-09].K_Lambda"
+ },
+ {
+  "sec": "12 AA",
+  "name": "product family sigma = 1e-12: K_Lambda (y/sigma = 0.49, sqrt(P_w) >= 1.26e+06)",
+  "value": 42.78371634495224,
+  "src": "aa_product.json:[sigma=1e-12].K_Lambda"
+ },
+ {
+  "sec": "12 AA",
+  "name": "adversarial KL, best (sigma = 0.01): K_Lambda",
+  "value": 3.015767478346282,
+  "src": "summary_AA.json:adv_best.KL"
+ },
+ {
+  "sec": "12 AA",
+  "name": "adversarial KL_gap, best (sigma = 0.01): K_Lambda",
+  "value": 0.6822388263596915,
+  "src": "summary_AA.json:adv_best.KL_gap"
+ },
+ {
+  "sec": "12 AA",
+  "name": "stage-Z states with sqrt(P_w) <= 1 and y/sigma <= 1/2: max K_Lambda",
+  "value": 0.9898644527225526,
+  "src": "summary_AA.json:K_Lambda_max_small_gap_stored"
+ },
+ {
+  "sec": "13 AB",
+  "name": "Theorem Z', t = 1/2: C as sigma -> 0",
+  "value": 2.3775978372492634,
+  "src": "summary_AB.json:t_half_C.sigma0"
+ },
+ {
+  "sec": "13 AB",
+  "name": "H0 removed, mixtures: max eps_pi (407 states)",
+  "value": 0.2663624571670445,
+  "src": "summary_AB.json:H0_mixtures.max_eps_pi"
+ },
+ {
+  "sec": "13 AB",
+  "name": "H0 removed, mixtures: states with Var(X_z) > pi^2",
+  "value": 0.0,
+  "src": "summary_AB.json:H0_mixtures.n_Var_gt_pi2"
+ },
+ {
+  "sec": "13 AB",
+  "name": "strip sigma = 0.01: log10 of the eps_pi bound",
+  "value": -3.5925906297171504,
+  "src": "summary_AB.json:H0_strips.strip_gmin_0.01"
+ },
+ {
+  "sec": "13 AB",
+  "name": "strip sigma = 0.0001: log10 of the eps_pi bound",
+  "value": -47.471283413223574,
+  "src": "summary_AB.json:H0_strips.strip_gmin_0.0001"
+ },
+ {
+  "sec": "14 AC",
+  "name": "Lemma AC1 E[q^2] <= 8 E[H_vw^2] + 2 J_ww/t: min ratio over 58 states x 13 blurs",
+  "value": 1.981770412036839,
+  "src": "summary_AC.json:L1_min_ratio"
+ },
+ {
+  "sec": "14 AC",
+  "name": "max t H_vv (bound 1)",
+  "value": 1.0000000000302558,
+  "src": "summary_AC.json:tHvv_max"
+ },
+ {
+  "sec": "14 AC",
+  "name": "max sigma^4 E[q^2] (bound 14)",
+  "value": 2.3475528176978715,
+  "src": "summary_AC.json:q2_dimensionless_max"
+ },
+ {
+  "sec": "14 AC",
+  "name": "directional de Bruijn dJ_ww/dt = -E[H_vw^2 + H_ww^2]: max rel. deviation (46 checks)",
+  "value": 0.0010722546412973433,
+  "src": "summary_AC.json:deBruijn_max_rel"
+ },
+ {
+  "sec": "14 AC",
+  "name": "log-convexity is not exact: two clusters (V2, sigma = 1e-3): R(sigma^2/4)/R(sigma^2)",
+  "value": 0.6985373979818911,
+  "src": "ac_heat_mix.json:twoclusters_V2_s0.001.rows[0.250, 1.000].R"
+ },
+ {
+  "sec": "14 AC",
+  "name": "same state: smallest ratio R(t_i)/R(t_i+1) of consecutive blurs (t = sigma^2/4 -> 0.35 sigma^2)",
+  "value": 0.8520175047804038,
+  "src": "ac_heat_mix.json:twoclusters_V2_s0.001.rows[..].R"
+ },
+ {
+  "sec": "15 AD",
+  "name": "Gamma_2 identity G1: max rel. deviation (finite differences, 3 lattices x 3 blurs)",
+  "value": 0.0007508687108861434,
+  "src": "summary_AD.json:gamma2_identities.G1"
+ },
+ {
+  "sec": "15 AD",
+  "name": "Gamma_2 identity G2: max rel. deviation (finite differences, 3 lattices x 3 blurs)",
+  "value": 0.0003754062890524157,
+  "src": "summary_AD.json:gamma2_identities.G2"
+ },
+ {
+  "sec": "15 AD",
+  "name": "Gamma_2 identity G4: max rel. deviation (finite differences, 3 lattices x 3 blurs)",
+  "value": 0.0013367689683755346,
+  "src": "summary_AD.json:gamma2_identities.G4"
+ },
+ {
+  "sec": "16 AE",
+  "name": "valley constant kappa_eta (Theorem AE3), eta = 0.05",
+  "value": 539.3970156917605,
+  "src": "summary_AE.json:kappa_eta.0.05"
+ },
+ {
+  "sec": "16 AE",
+  "name": "valley constant kappa_eta (Theorem AE3), eta = 0.1",
+  "value": 531.4473997806633,
+  "src": "summary_AE.json:kappa_eta.0.1"
+ },
+ {
+  "sec": "16 AE",
+  "name": "valley constant kappa_eta (Theorem AE3), eta = 0.2",
+  "value": 508.1989560787854,
+  "src": "summary_AE.json:kappa_eta.0.2"
+ },
+ {
+  "sec": "16 AE",
+  "name": "valley constant kappa_eta (Theorem AE3), eta = 0.5",
+  "value": 499.4715277095551,
+  "src": "summary_AE.json:kappa_eta.0.5"
+ },
+ {
+  "sec": "16 AE",
+  "name": "1-d: largest N_eta/(tJ) found (searches K = 2-32), eta = 0.1",
+  "value": 2.2546730830082544,
+  "src": "summary_AE.json:oned.max_N_eta_over_tJ"
+ },
+ {
+  "sec": "16 AE",
+  "name": "1-d: largest t^2 R' found (searches K = 2-32)",
+  "value": -0.36870443379782847,
+  "src": "summary_AE.json:oned.max_t2Rp"
+ },
+ {
+  "sec": "16 AE",
+  "name": "1-d lattices (81 points, spacing 1-8): largest t^2 R'",
+  "value": -0.24150182204235593,
+  "src": "summary_AE.json:oned.lattice_1d.max_t2Rp"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.25: K",
+  "value": 1.0544985840946381,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.25.K"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.25: c0",
+  "value": 458.5556468277741,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.25.c0"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.25: B",
+  "value": 11.247984897009474,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.25.B"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.25: c",
+  "value": 0.09491017300400474,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.25.c"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.25: C_sigma1",
+  "value": 165.3928278585414,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.25.C_sigma1"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.50: K",
+  "value": 1.0309597122261416,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.50.K"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.50: c0",
+  "value": 207.3677005368141,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.50.c0"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.50: B",
+  "value": 16.495355395618265,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.50.B"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.50: c",
+  "value": 0.07837350846950153,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.50.c"
+ },
+ {
+  "sec": "16 AE",
+  "name": "Theorem AE4 constants 1d_eta0.1_tau0.50: C_sigma1",
+  "value": 52.2318679807396,
+  "src": "summary_AE.json:constants.1d_eta0.1_tau0.50.C_sigma1"
+ },
+ {
+  "sec": "17 AF",
+  "name": "two-sided valley constant kappa_0.1 (weight (c-1)^3)",
+  "value": 267.1558819648165,
+  "src": "summary_AF.json:kappa_two_sided.0.1"
+ },
+ {
+  "sec": "17 AF",
+  "name": "strip optima, t in {1/4, 1/2, 1} sigma^2: largest t2R1",
+  "value": -5.0466297807361116e-09,
+  "src": "summary_AF.json:strips_max.t2R1"
+ },
+ {
+  "sec": "17 AF",
+  "name": "strip optima, t in {1/4, 1/2, 1} sigma^2: largest kappa_H",
+  "value": 0.05520112323175593,
+  "src": "summary_AF.json:strips_max.kappa_H"
+ },
+ {
+  "sec": "17 AF",
+  "name": "strip optima, t in {1/4, 1/2, 1} sigma^2: largest lambda_max",
+  "value": 1.8202650990694034,
+  "src": "summary_AF.json:strips_max.lambda_max"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.25: K",
+  "value": 1.0544985840946381,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.25.K"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.25: B",
+  "value": 11.247984897009474,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.25.B"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.25: c",
+  "value": 0.09491017300400474,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.25.c"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.25: C_sigma1",
+  "value": 84.29667515799821,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.25.C_sigma1"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.50: K",
+  "value": 1.0309597122261416,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.50.K"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.50: B",
+  "value": 16.495355395618265,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.50.B"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.50: c",
+  "value": 0.07837350846950153,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.50.c"
+ },
+ {
+  "sec": "17 AF",
+  "name": "constants 1d_two_sided_eta0.1_tau0.50: C_sigma1",
+  "value": 27.224823601039713,
+  "src": "summary_AF.json:constants.1d_two_sided_eta0.1_tau0.50.C_sigma1"
+ },
+ {
+  "sec": "18 AG",
+  "name": "strips: largest posterior excess lambda_max(-tH) over t in [sigma^2/4, sigma^2] and all y (8 optima, 25 blurs)",
+  "value": 1.8744847946244274,
+  "src": "summary_AG.json:strip_lambda_star"
+ },
+ {
+  "sec": "18 AG",
+  "name": "strip sigma = 1e-2: lambda_max at t = 1/4 sigma^2 (main line: 1.874)",
+  "value": 1.8744847946244274,
+  "src": "summary_AG.json:main_line_check_sigma_0.01.quarter"
+ },
+ {
+  "sec": "18 AG",
+  "name": "strip sigma = 1e-2: lambda_max at t = 1/2 sigma^2 (main line: 1.756)",
+  "value": 1.7563918378137806,
+  "src": "summary_AG.json:main_line_check_sigma_0.01.half"
+ },
+ {
+  "sec": "18 AG",
+  "name": "strip sigma = 1e-2: lambda_max at t = 1 sigma^2 (main line: 1.537)",
+  "value": 1.536959395505742,
+  "src": "summary_AG.json:main_line_check_sigma_0.01.one"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.25: B",
+  "value": 23.43158008797357,
+  "src": "summary_AG.json:strip_theorem_tau0.25.B"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.25: c",
+  "value": 0.06575811257885024,
+  "src": "summary_AG.json:strip_theorem_tau0.25.c"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.25: C_sigma1",
+  "value": 2.275383370513696,
+  "src": "summary_AG.json:strip_theorem_tau0.25.C_sigma1"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.50: B",
+  "value": 26.62676083464239,
+  "src": "summary_AG.json:strip_theorem_tau0.50.B"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.50: c",
+  "value": 0.06168661773320348,
+  "src": "summary_AG.json:strip_theorem_tau0.50.c"
+ },
+ {
+  "sec": "18 AG",
+  "name": "Proposition AG1 on the strips (A = lambda*), tau = 0.50: C_sigma1",
+  "value": 1.923688535653695,
+  "src": "summary_AG.json:strip_theorem_tau0.50.C_sigma1"
+ },
+ {
+  "sec": "19 C1a",
+  "name": "stored state-blur rows (stage-AC heat-flow rows, stage-AD lattice ladders, stage-AF strip optima): count",
+  "value": 1778.0,
+  "src": "ad_qlc_lattice.json:rows (+ ac_heat_lattice/points/mix/strip.json, af_strip.json)"
+ },
+ {
+  "sec": "19 C1a",
+  "name": "max over those rows of tR - ln(1/(t J_ww)) ((T2) with B' = 1 needs A' >= this on the stored states)",
+  "value": 6.544021014282407,
+  "src": "ad_qlc_lattice.json:comb_D1.00_ang30 (t = 11.737651753019792)"
+ }
+]
