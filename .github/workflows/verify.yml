@@ -20,3 +20,5 @@ jobs:
         run: python make_numbers.py
       - name: Run the verification suite (65 checks)
         run: python verification/run_all_E.py
+      - name: Run the independent checks (12 checks)
+        run: python independent_checks/check_paperE.py
